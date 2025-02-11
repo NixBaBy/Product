@@ -5,6 +5,8 @@ import LadiUser from "./_components/LadiUser/LadiUser";
 import OrderNow from "./_components/orderNow/OrderNow";
 import UserCommends from "./_components/userCommends/UserCommend";
 import StickyOff from "./_components/StickyOff";
+import Product from "@/components/Product";
+import MoreLikeThis from "./_components/MoreLikeThis";
 
 const page = ({ params }) => {
   const [fetchData, setFetchData] = useState();
@@ -19,7 +21,8 @@ const page = ({ params }) => {
   }, []);
 
   return (
-    <div className="w-[420px] m-auto  relative scroll-smooth ">
+    <div className="flex flex-col items-center">
+         <div className="w-[420px] m-auto  relative scroll-smooth ">
       <div
         style={{
           backgroundImage: `url(${fetchData?.img})`,
@@ -32,6 +35,9 @@ const page = ({ params }) => {
       <UserCommends fetchData={fetchData} />
       <StickyOff />
     </div>
+    <MoreLikeThis/>
+    </div>
+ 
   );
 };
 

@@ -13,6 +13,7 @@ const Product = () => {
     };
     getData();
   }, []);
+
   return (
     <div className="w-full h-[84vh] ">
       <motion.div
@@ -34,7 +35,7 @@ const Product = () => {
           return (
             <Link href={`/product/${product.id}`} key={product.id}>
               <div className="max-w-[280px] p-4 hover:border-[1px] border-solid border-orange-700 rounded-lg cursor-pointer flex flex-col gap-5 relative ">
-                <div className="absolute top-2">asd</div>
+                <div className="absolute top-0 right-5 bg-pink-400 rounded-[20px] w-[80px] flex justify-center items-center"><p className="text-white text-[20px]">{product.discounted}</p></div>
                 <div
                   style={{ backgroundImage: `url(${product.img})` }}
                   className="w-[250px] h-[250px] bg-cover bg-center rounded-lg"
