@@ -20,11 +20,10 @@ const Product = () => {
           return (
             <Link href={`/product/${product.id}`} key={product.id}>
               <div className="max-w-[260px] p-2 hover:border-[1px] border-solid border-orange-700 rounded-lg cursor-pointer flex flex-col gap-5 ">
-                <img
-                  src={product.img}
-                  alt=""
-                  className="w-[250px] h-[250px] rounded-lg"
-                />
+                <div
+                  style={{ backgroundImage: `url(${product.img})` }}
+                  className="w-[250px] h-[250px] bg-cover bg-center rounded-lg"
+                ></div>
                 <p>{product.tittle}</p>
                 <p className="text-orange-700 font-bold  underline">
                   {product.price}

@@ -28,8 +28,7 @@ const UserCommends = ({ fetchData }) => {
         </div>
       </div>
       <Commends fetchData={fetchData} />
-      <Commends fetchData={fetchData} />
-      <Commends fetchData={fetchData} />
+
       <div className="flex gap-7 items-center mt-5 ml-[-80px]">
         <img
           src="https://w.ladicdn.com/5c7362c6c417ab07e5196b05/typing-animation-3x-20190902093018-20200106170119-20231109164053-x-tjc.gif"

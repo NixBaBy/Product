@@ -1,6 +1,7 @@
 import React from "react";
 
 const Commends = ({ fetchData }) => {
+  console.log(fetchData);
   return (
     <div>
       {fetchData?.userCommends?.map((commend) => {
