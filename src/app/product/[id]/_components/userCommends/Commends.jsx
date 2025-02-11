@@ -1,7 +1,6 @@
 import React from "react";
 
 const Commends = ({ fetchData }) => {
-  console.log(fetchData);
   return (
     <div>
       {fetchData?.userCommends?.map((commend) => {
@@ -29,7 +28,7 @@ const Commends = ({ fetchData }) => {
                   Маш сайн бүтээгдэхүүн
                 </p>
               </div>
-              <div className="flex">
+              <div className="flex items-center">
                 <img src="/verify.svg" alt="" className="w-[17px] h-[17px]" />
                 <p className="text-[#01C31A] text-[13px]">
                   Худалдан авалтын гэрчилгээ

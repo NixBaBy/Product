@@ -19,20 +19,18 @@ const page = ({ params }) => {
   }, []);
 
   return (
-    <div className="w-[420px] m-auto  relative scroll-smooth">
-      <div className="">
-        <div
-          style={{
-            backgroundImage: `url(${fetchData?.img})`,
-          }}
-          className="bg-cover h-[610px] mt-[-3px]  relative"
-        ></div>
-        <Ladi fetchData={fetchData} />
-        <LadiUser fetchData={fetchData} />
-        <OrderNow fetchData={fetchData} />
-        <UserCommends fetchData={fetchData} />
-        <StickyOff />
-      </div>
+    <div className="w-[420px] m-auto  relative scroll-smooth ">
+      <div
+        style={{
+          backgroundImage: `url(${fetchData?.img})`,
+        }}
+        className="bg-cover h-[610px] mt-[-3px]  relative"
+      ></div>
+      <Ladi fetchData={fetchData} />
+      <LadiUser fetchData={fetchData} />
+      <OrderNow fetchData={fetchData} />
+      <UserCommends fetchData={fetchData} />
+      <StickyOff />
     </div>
   );
 };

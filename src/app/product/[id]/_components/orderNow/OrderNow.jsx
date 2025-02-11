@@ -176,7 +176,7 @@ const OrderNow = ({ fetchData }) => {
       </motion.button>
 
       <div className="w-[400px] bg-orange-500 border-[2px] border-solid border-white rounded-[14px] flex gap-2 items-center justify-center mt-5">
-        <img src="/baraa.svg" alt="" className="w-[25px] h-[25px]" />
+        <img src="https://challange2-eight.vercel.app/baraa.svg" alt="" className="w-[25px] h-[25px]" />
         <div className="flex items-center">
           <p>Зөвхөн</p>
           <RamainingProducts />
