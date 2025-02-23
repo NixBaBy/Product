@@ -5,7 +5,6 @@ import LadiUser from "./_components/LadiUser/LadiUser";
 import OrderNow from "./_components/orderNow/OrderNow";
 import UserCommends from "./_components/userCommends/UserCommend";
 import StickyOff from "./_components/StickyOff";
-import Product from "@/components/Product";
 import MoreLikeThis from "./_components/MoreLikeThis";
 
 const page = ({ params }) => {
@@ -22,22 +21,21 @@ const page = ({ params }) => {
 
   return (
     <div className="flex flex-col items-center">
-         <div className="w-[420px] m-auto  relative scroll-smooth ">
-      <div
-        style={{
-          backgroundImage: `url(${fetchData?.img})`,
-        }}
-        className="bg-cover h-[610px] mt-[-3px]  relative"
-      ></div>
-      <Ladi fetchData={fetchData} />
-      <LadiUser fetchData={fetchData} />
-      <OrderNow fetchData={fetchData} />
-      <UserCommends fetchData={fetchData} />
-      <StickyOff />
+      <div className="w-[420px] m-auto  relative scroll-smooth ">
+        <div
+          style={{
+            backgroundImage: `url(${fetchData?.img})`,
+          }}
+          className="bg-cover h-[610px] mt-[-3px]  relative"
+        ></div>
+        <Ladi fetchData={fetchData} />
+        <LadiUser fetchData={fetchData} />
+        <OrderNow fetchData={fetchData} />
+        <UserCommends fetchData={fetchData} />
+        <StickyOff />
+      </div>
+      <MoreLikeThis />
     </div>
-    <MoreLikeThis/>
-    </div>
- 
   );
 };
 

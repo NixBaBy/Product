@@ -15,7 +15,7 @@ const Product = () => {
   }, []);
 
   return (
-    <div className="w-full h-[84vh] ">
+    <div className="">
       <motion.div
         animate={{ opacity: [0, 0.7, 1] }}
         transition={{
@@ -26,7 +26,7 @@ const Product = () => {
           ease: "easeInOut",
         }}
       >
-        <p className=" pt-10 ml-10 text-[20px] font-bold text-[#FF0036] text-center  w-[323px]">
+        <p className=" pt-10 ml-10 text-[20px] font-bold text-[#FF0036] text-center  w-[335px]">
           ✨ ХЯМДРАЛТАЙ БАРААНУУД ✨
         </p>
       </motion.div>
@@ -34,13 +34,22 @@ const Product = () => {
         {fetchData?.map((product) => {
           return (
             <Link href={`/product/${product.id}`} key={product.id}>
-              <div className="max-w-[280px] p-4 hover:border-[1px] border-solid border-orange-700 rounded-lg cursor-pointer flex flex-col gap-5 relative ">
-                <div className="absolute top-0 right-5 bg-pink-400 rounded-[20px] w-[80px] flex justify-center items-center"><p className="text-white text-[20px]">{product.discounted}</p></div>
+              <div className="max-w-[280px] p-4  cursor-pointer flex flex-col gap-5 relative group  hover:shadow-lg transition-shadow duration-500 rounded-lg">
+                <div className="absolute top-0 right-5 bg-pink-400 rounded-[20px] w-[80px] flex justify-center items-center">
+                  <p className="text-white text-[20px]">{product.discounted}</p>
+                </div>
                 <div
                   style={{ backgroundImage: `url(${product.img})` }}
                   className="w-[250px] h-[250px] bg-cover bg-center rounded-lg"
                 ></div>
-                <p>{product.tittle}</p>
+                <div className="rounded-lg bg-orange-600 w-[60%] text-center text-white font-bold absolute bottom-[200px] left-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  Барааг Үзэх
+                </div>
+                <p>
+                  {product.tittle.length > 20
+                    ? product.tittle.slice(0, 160) + "..."
+                    : product.tittle}
+                </p>
                 <p className="text-orange-700 font-bold  underline">
                   {product.price}
                 </p>
